@@ -1,0 +1,30 @@
+<h1> edit contacts </h1>
+
+
+<br>
+<%= form_tag "/contacts/#{@contacts.id}", method: :patch  do %>
+<ul>
+<br>
+<li><h4><%= label_tag :first_name %>
+<%= text_field_tag :first_name, @contacts.first_name %></li>
+<br>
+<li><h4><%= label_tag :middle_name%>
+<%= text_field_tag :middle_name , @contacts.middle_name %></li>
+<li><h4><%= label_tag :last_name %>
+<%= text_field_tag :last_name, @contacts.last_name  %></li>
+<br>
+<li><h4><%= label_tag :email %>
+<%= text_field_tag :email ,  @contacts.email%></li>
+<br>
+<li><h4><%= label_tag :phone_number %>
+<%= text_field_tag :phone_number , @contacts.phone_number %></li>
+<br>
+<li><h4><%= label_tag :address %>
+<%= text_field_tag :address , @contacts.address %></li>
+<br>
+<li><p><%= label_tag :bio %>
+<%= text_area_tag :bio, @contacts.bio %></li>
+
+<br>
+<%= submit_tag "Add Contacts" %></ul>
+<% end %>

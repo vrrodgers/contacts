@@ -1,0 +1,25 @@
+<h1> Enter in a new contact . </h1>
+<br>
+<%= form_tag '/contacts' do %>
+<ul>
+<li><h4><%= label_tag :First_name %>
+<%= text_field_tag :First_name %></li>
+
+<li><h4><%= label_tag :Middle_name %>
+<%= text_field_tag :middle_name %></li>
+
+<br>
+<li><h4><%= label_tag :last_name %>
+<%= text_field_tag :last_name %></li>
+<br>
+<li><h4><%= label_tag :address %>
+<%= text_field_tag :address %></li>
+<br>
+<li><h4><%= label_tag :email %>
+<%= text_field_tag :email %></li>
+li><h4><%= label_tag :bio %>
+<%= text_field_tag :bio %></li>
+
+<br>
+<%= submit_tag "Add Contact" %></ul>
+<% end %>
